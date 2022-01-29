@@ -1,0 +1,45 @@
+@import "../Constants/Mixin";
+@import "../Constants/Variables";
+
+.Education {
+  width: 90%;
+  margin: auto;
+
+  .universities {
+    @include Display(row, space-between, flex-start);
+    border: $Border;
+    border-radius: $BorderRadius;
+    margin: 10px auto;
+    padding: 10px;
+
+    h3, h4, h5, h6, p {
+      margin: 5px 0 !important;
+    }
+
+    .descriptions {
+      width: 75%;
+    }
+
+    img {
+      width: 20%;
+      border-radius: 10%;
+      margin: 10px;
+
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Education {
+    img {
+      display: none;
+    }
+
+    .descriptions {
+      width: 100% !important
+    }
+  }
+
+
+}
+

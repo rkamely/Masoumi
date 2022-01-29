@@ -1,0 +1,54 @@
+@import "src/Constants/Mixin";
+@import "src/Constants/Variables";
+
+@font-face {
+  font-family: "Abel";
+  src: local('Abel'), url('./Assets/iransans.woff') format('truetype');
+}
+
+.App {
+  background-color: $Background-color;
+  height: auto;
+
+  * {
+    box-sizing: border-box;
+    text-decoration: none;
+    direction: rtl;
+    font-family: 'Abel';
+  }
+
+  h1 {
+    font-size: 3.5vw;
+
+  }
+
+  h2 {
+    font-size: 2vw;
+
+  }
+
+  h3 {
+    font-size: 1.8vw;
+    color: $FontColor;
+
+  }
+
+  h4 {
+    font-size: 1.6vw;
+    color: $FontColor;
+
+  }
+
+  h5 {
+    font-size: 1.4vw;
+    color: $FontColor;
+
+  }
+
+  p {
+    font-size: 1.5vw;
+    text-align: justify;
+    color: $FontColor;
+
+  }
+}

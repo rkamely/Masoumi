@@ -1,0 +1,21 @@
+@import "../../Constants/Mixin";
+@import "../../Constants/Variables";
+
+button {
+  height: 50px;
+  font-size: 1.5vw;
+  font-weight: bolder;
+  border: 4px solid $Background-color;
+  cursor: pointer;
+  background-color: $BackgroundNav;
+  color: $Background-color;
+  width: 40%;
+  margin: 5px auto;
+  padding: 0 10px;
+
+  &:hover {
+    background-color: $Background-color;
+    color: $BackgroundNav;
+
+  }
+}

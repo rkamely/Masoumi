@@ -1,0 +1,43 @@
+@import "../../Constants/Mixin";
+@import "../../Constants/Variables";
+
+.experience {
+  width: 80%;
+  margin: auto;
+
+  .parent {
+    @include Display(row, space-between, flex-start);
+    margin-top: 100px;
+
+    .rightSide {
+      width: 45%;
+    }
+  }
+
+  .leftSide {
+    margin-top: 200px;
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .parent {
+    Display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px!important;
+
+    > * {
+      width: 100% !important;
+      margin: 0 !important;
+
+      > * {
+        border-bottom: $Border;
+        margin: 10px 0 !important;
+
+      }
+    }
+  }
+
+}

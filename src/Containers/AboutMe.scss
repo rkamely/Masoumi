@@ -1,0 +1,114 @@
+@import "src/Constants/Mixin";
+@import "src/Constants/Variables";
+
+.aboutMe {
+  width: 90%;
+  margin: 50px auto;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+
+  .contentَAboutMe {
+    @include Display(row, space-between, flex-start);
+    padding: 50px 0 50px 50px;
+
+    .textAboutMe {
+      width: 65%;
+    }
+
+    .imgFrame {
+      margin-top: 45px;
+      width: 200px;
+      height: 200px;
+      background-color: #DDFFF7;
+      position: relative;
+      box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.75);
+      background-image: url("https://goop-img.com/wp-content/uploads/2020/06/Mask-Group-2.png");
+      background-position: center; /* Center the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+
+    }
+
+    .imgFrame:after, .imgFrame:before {
+      mix-blend-mode: multiply;
+      filter: none;
+      z-index: -1;
+      content: '';
+      width: calc(100% + (50px * 2));
+      height: calc(100% + (50px * 2));
+      position: absolute;
+      left: 0;
+      display: block;
+      animation: border 10s ease-in-out infinite;
+      transform: translateX(-50px) translateY(-50px);
+    }
+
+    @keyframes border {
+      0%, 100% {
+        -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+        clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+      }
+      50% {
+        -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+        clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+      }
+    }
+
+    .imgFrame:after {
+      animation-delay: -5s;
+      background-color: #93e1d8;
+      clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+    }
+
+    .imgFrame:before {
+      background-color: #AA4465;
+      clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+    }
+  }
+
+
+}
+
+@media only screen and (max-width: 992px) {
+  .aboutMe {
+    .textAboutMe {
+      width: 55% !important;
+    }
+
+    .imgFrame {
+      width: 170px !important;
+      height: 170px !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutMe {
+    margin-top: 70px!important;
+    text-align: center;
+
+    .contentَAboutMe {
+      @include Display(row-reverse, space-around, center);
+      width: 90%;
+      padding: 10px 0 !important;
+      margin: auto !important;
+
+      .textAboutMe {
+        width: 70% !important;
+      }
+    }
+
+    .imgFrame {
+      width: 80px !important;
+      height: 80px !important;
+      box-shadow: none !important;
+      border-radius: 5px;
+
+    }
+
+    .imgFrame:after, .imgFrame:before {
+      display: none !important;
+    }
+  }
+}

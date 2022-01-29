@@ -1,0 +1,166 @@
+@import "../Constants/Mixin";
+@import "../Constants/Variables";
+
+.Skills {
+  width: 90%;
+  margin: auto;
+
+  //
+  //.mainSkills {
+  //  margin: 50px auto;
+  //  @include Display(row, space-between, center);
+  //
+  //  .everyMainSkill {
+  //    @include Display(row, space-around, center);
+  //    position: relative;
+  //    width: 20%;
+  //
+  //    .skillTitle {
+  //      position: absolute;
+  //      font-size: 2.5vw;
+  //    }
+  //  }
+  //
+  //  .otherSkills {
+  //    @include Display(column, space-between, center);
+  //
+  //    .everyOtherSkill {
+  //      position: relative;
+  //
+  //      h3 {
+  //        position: absolute;
+  //        font-size: 2.5vw;
+  //        left: 5px;
+  //        top: 5px;
+  //        margin: 0;
+  //      }
+  //    }
+  //  }
+  //}
+
+
+  .skillItems {
+    width: 80%;
+    margin: 20px auto 0 auto;
+
+    h1, h3 {
+      margin: 0;
+    }
+
+    .item {
+      @include Display(row, flex-start, center);
+      background-image: linear-gradient(to left, #d3fbd8, #cdfef6, #ddfeff, #f4fdff, #ffffff);
+      border-radius: 0 90px 90px 0;
+      padding: 0;
+      border: none;
+      position: relative;
+      height: 180px;
+
+      .shadow {
+        box-shadow: 16px 13px 14px -10px #324b4c;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1000;
+        position: absolute;
+        width: 91%;
+        height: 100%;
+        border-radius: 0 90px 90px 0;
+        right: 1px;
+      }
+
+      .contentSkills {
+        margin-right: 15px;
+        width: 50%;
+
+      }
+
+      .number {
+        @include Display(row, center, center);
+        border-radius: 50%;
+        background-image: linear-gradient(to right, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        font-weight: bolder;
+        margin: 0 10px;
+
+
+        span {
+          @include Display(row, center, center);
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          background-image: linear-gradient(to left, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
+          font-size: 6vw;
+
+        }
+      }
+    }
+
+    .item2 {
+      @include Display(row-reverse, flex-start, center);
+      background-image: linear-gradient(to right, #d3fbd8, #cdfef6, #ddfeff, #f4fdff, #ffffff);
+      border-radius: 90px 0 0 90px;
+      padding: 0;
+      position: relative;
+      height: 180px;
+
+      .shadow2 {
+        box-shadow: -16px 13px 14px -10px #324b4c;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1000;
+        position: absolute;
+        width: 91%;
+        height: 100%;
+        border-radius: 90px 0 0 90px;
+        left: 1px;
+      }
+
+      .contentSkills {
+        margin-left: 15px;
+        width: 50%;
+
+        h1 {
+          direction: rtl;
+        }
+
+      }
+
+      .number2 {
+        @include Display(row, center, center);
+        border-radius: 50%;
+        background-image: linear-gradient(to right, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        font-weight: bolder;
+        margin: 0 10px;
+
+        span {
+          @include Display(row, center, center);
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          background-image: linear-gradient(to left, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
+          font-size: 6vw;
+
+        }
+
+      }
+    }
+  }
+
+}
+@media only screen and (max-width: 600px){
+  .item , .item2{
+    height: 90px!important;
+  }
+  .number , .number2{
+    height: 70px!important;
+    width: 70px!important;
+    span{
+      width: 50px!important;
+      height: 50px!important;
+    }
+  }
+
+}
