@@ -14,7 +14,7 @@
 
 
   &:focus {
-    box-shadow: inset 1px 0 7px 0 #2B6766 ;
+    box-shadow: $BoxShadow ;
   }
 }
 
@@ -22,5 +22,5 @@
 ::placeholder {
   color: $FontColor;
   font-size: 1vw;
-  opacity: 0.5;
+  opacity: .8;
 }

@@ -1,21 +1,78 @@
 @import "../../Constants/Mixin";
 @import "../../Constants/Variables";
 
-button {
-  height: 50px;
-  font-size: 1.5vw;
-  font-weight: bolder;
-  border: 4px solid $Background-color;
-  cursor: pointer;
-  background-color: $BackgroundNav;
-  color: $Background-color;
+
+.ButtonContactMe {
+  @include Display(row, center, center);
+  position: relative;
+  margin: 20px auto;
+  background: #75C0BB;
+  color: $FontColor;
   width: 40%;
-  margin: 5px auto;
+  height: 40px;
+  border: 0;
+  font-size: 22px;
+  border-radius: 4px;
+  transition: .5s;
+  overflow: hidden;
+
+  font-weight: bolder;
+  cursor: pointer;
   padding: 0 10px;
 
-  &:hover {
-    background-color: $Background-color;
-    color: $BackgroundNav;
+  &:focus {
+    outline: 0;
+  }
 
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+
+  &:hover {
+    background: #2B6766;
+    cursor: pointer;
+    color: #FFFFFF;
+
+    &:before {
+      transform: translateX(600px) skewX(-15deg);
+      opacity: 0.6;
+      transition: 1.2s;
+    }
+
+    &:after {
+      transform: translateX(600px) skewX(-15deg);
+      opacity: 1;
+      transition: 1.2s;
+    }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .ButtonContactMe {
+    font-size: 18px;
+    height: 40px;
+  }}

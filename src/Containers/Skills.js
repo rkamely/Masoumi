@@ -47,7 +47,6 @@ function Skills() {
                     </div>
                 </div>
             </div>
-
             <DownloadButton/>
         </section>
     );

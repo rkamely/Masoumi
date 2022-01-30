@@ -4,40 +4,7 @@
 .Skills {
   width: 90%;
   margin: auto;
-
-  //
-  //.mainSkills {
-  //  margin: 50px auto;
-  //  @include Display(row, space-between, center);
-  //
-  //  .everyMainSkill {
-  //    @include Display(row, space-around, center);
-  //    position: relative;
-  //    width: 20%;
-  //
-  //    .skillTitle {
-  //      position: absolute;
-  //      font-size: 2.5vw;
-  //    }
-  //  }
-  //
-  //  .otherSkills {
-  //    @include Display(column, space-between, center);
-  //
-  //    .everyOtherSkill {
-  //      position: relative;
-  //
-  //      h3 {
-  //        position: absolute;
-  //        font-size: 2.5vw;
-  //        left: 5px;
-  //        top: 5px;
-  //        margin: 0;
-  //      }
-  //    }
-  //  }
-  //}
-
+  padding-top: 50px;
 
   .skillItems {
     width: 80%;
@@ -162,5 +129,4 @@
       height: 50px!important;
     }
   }
-
 }

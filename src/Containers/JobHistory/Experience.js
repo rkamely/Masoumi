@@ -10,9 +10,9 @@ function Experience(props) {
             <div>
                 <div className='titlesAndLogo'>
                     <div>
-                        <h3>{props.jobTitle}</h3>
-                        <h4>{props.company}</h4>
-                        <h5>{props.time}</h5>
+                        <h1>{props.jobTitle}</h1>
+                        <h3>{props.company}</h3>
+                        <h3>{props.time}</h3>
                     </div>
                     <img src={props.img} alt=""/>
                 </div>

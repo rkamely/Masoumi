@@ -14,7 +14,7 @@
   width: 200px;
   height: 60px;
   border: 0;
-  font-size: 18px;
+  font-size: 25px;
   border-radius: 4px;
   transition: .5s;
   overflow: hidden;
@@ -68,4 +68,12 @@
       transition: 1.2s;
     }
   }
+}
+@media only screen and (max-width: 600px){
+  .downloadBtn{
+    font-size: 16px;
+    width: 130px;
+    height: 40px;
+  }
+
 }

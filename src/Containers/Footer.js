@@ -16,6 +16,7 @@ function Footer() {
                 <textarea name="" id="" cols="30" rows="10" placeholder='متن پیام'/>
                 <ButtonContactMe content={'ارسال'}/>
             </form>
+            <div className='signature'>Designed by Reza Kameli @2021</div>
         </div>
     );
 }

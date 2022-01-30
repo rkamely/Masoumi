@@ -7,7 +7,7 @@
   z-index: 1;
   position: relative;
   overflow: hidden;
-
+padding-top: 65px;
   .contentَAboutMe {
     @include Display(row, space-between, flex-start);
     padding: 50px 0 50px 50px;
@@ -78,7 +78,9 @@
     .imgFrame {
       width: 170px !important;
       height: 170px !important;
+      align-self: center;
       margin: 0 !important;
+
     }
   }
 }

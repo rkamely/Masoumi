@@ -5,7 +5,7 @@ import './ButtonContactMe.scss';
 
 function ButtonContactMe(props) {
     return (
-        <button> {props.content} </button>
+        <button className='ButtonContactMe'> {props.content} </button>
 
     );
 }

@@ -4,6 +4,7 @@
 .experience {
   width: 80%;
   margin: auto;
+  padding-top: 50px;
 
   .parent {
     @include Display(row, space-between, flex-start);

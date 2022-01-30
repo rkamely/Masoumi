@@ -7,19 +7,20 @@ import HamburgerButton from "../Components/Button/HamburgerButton";
 
 function Header() {
     const [open, setOpen] = useState(false)
-    let prevScrollPos = window.pageYOffset;
-
-    window.onscroll = function () {
-        let currentScrollPos = window.pageYOffset;
-        if (prevScrollPos > currentScrollPos){ {
-                document.getElementById("Header").style.top = "0";
-                document.getElementById("Header").style.opacity = "1";
-            }
-        } else {
-            document.getElementById("Header").style.top = "-50px";
-        }
-        prevScrollPos = currentScrollPos;
-    }
+    // let prevScrollPos = window.pageYOffset;
+    //
+    // window.onscroll = function () {
+    //     let currentScrollPos = window.pageYOffset;
+    //     if (prevScrollPos > currentScrollPos) {
+    //         {
+    //             document.getElementById("Header").style.height = "50px";
+    //             document.getElementById("Header").style.opacity = "1";
+    //         }
+    //     } else {
+    //         document.getElementById("Header").style.height = "65px";
+    //     }
+    //     prevScrollPos = currentScrollPos;
+    // }
 
     const scrollToSection = (e) => {
         setOpen(false)
@@ -32,19 +33,22 @@ function Header() {
     const mobileMenu = () => {
         setOpen(!open)
     }
-    return (
-        <nav id='Header' className="Header">
-            <div className={open ? 'rightSide' : 'closeRightSide'}>
-                <div className='HamburgerBtn' onClick={mobileMenu}><HamburgerButton open={open}/></div>
-                <button onClick={() => scrollToSection('aboutMe')}>درباره من</button>
-                <button onClick={() => scrollToSection('Experience')}>تجربیات</button>
-                <button onClick={() => scrollToSection('Skills')}>مهارت ها</button>
-                <button onClick={() => scrollToSection('Education')}>تحصیلات</button>
-            </div>
-            <div className='leftSide'>
-                سامان
-            </div>
-        </nav>
+    return (<div className='headerRelative'>
+            <nav id='Header' className="Header">
+                <div className='HamburgerBtn' onClick={mobileMenu}><HamburgerButton open={open} /></div>
+                <div className={open ? 'rightSide' : 'closeRightSide'}>
+                    <button onClick={() => scrollToSection('aboutMe')}>درباره من</button>
+                    <button onClick={() => scrollToSection('experience')}>تجربیات</button>
+                    <button onClick={() => scrollToSection('Skills')}>مهارت ها</button>
+                    <button onClick={() => scrollToSection('Education')}>تحصیلات</button>
+                    <button onClick={() => scrollToSection('Footer')}>تماس با من</button>
+
+                </div>
+                <div className='leftSide'>
+                    سامان
+                </div>
+            </nav>
+        </div>
     );
 }
 

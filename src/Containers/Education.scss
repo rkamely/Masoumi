@@ -4,6 +4,7 @@
 .Education {
   width: 90%;
   margin: auto;
+  padding-top: 50px;
 
   .universities {
     @include Display(row, space-between, flex-start);
