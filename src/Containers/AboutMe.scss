@@ -114,3 +114,18 @@ padding-top: 65px;
     }
   }
 }
+@media only screen and (max-width: 360px) {
+  .contentَAboutMe{
+    width: 100% !important;
+    padding: 0!important;
+  }
+  .textAboutMe{
+    border: $Border;
+    border-radius: $BorderRadius;
+    box-shadow: $BoxShadow;
+    padding: 10px 10px;
+  }
+  .imgFrame {
+   display: none;}
+
+  }

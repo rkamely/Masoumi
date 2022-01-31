@@ -6,6 +6,7 @@
   @include Display(row, space-between, center);
   padding: 0 20px;
   background-color: #{$BackgroundNav};
+  backdrop-filter: blur(3px);
   position: fixed;
   top: 0;
   transition: 0.3s;
