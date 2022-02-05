@@ -3,6 +3,7 @@
 
 .Experience {
   margin: auto;
+  padding: 0 30px;
 
   .titlesAndLogo {
     @include Display(row, space-between, center);
@@ -15,8 +16,9 @@
 
   }
 }
+
 @media only screen and (max-width: 600px) {
-  img{
+  img {
     width: 20% !important;
   }
 

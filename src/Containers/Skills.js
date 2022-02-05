@@ -3,13 +3,14 @@ import SegmentTitle from "../Components/SegmentTitle";
 import DownloadButton from "../Components/Button/DownloadButton";
 
 import './Skills.scss';
+import skills from "../Assets/skills.png";
 
 
 function Skills() {
 
     return (
         <section className='Skills'>
-            <SegmentTitle title={"مهارت ها"}/>
+            <SegmentTitle title={"مهارت ها"}src={skills} alt={'مهارت ها'}/>
             <div className='skillItems'>
                 <div className='item'>
                     <div className='shadow'/>

@@ -3,16 +3,18 @@
 
 .Footer {
   margin-top: 50px;
-  padding-top: 50px;
+  padding-top: 85px;
+
 
   > :nth-child(1) {
-    padding-right: 20px;
+    padding-right: 7%;
     padding-bottom: 20px;
   }
 
   .contactForm {
     @include Display(column, flex-start, center);
-    padding: 50px 0;
+    padding-top:  50px ;
+
 
     textarea {
       width: 60%;
@@ -38,11 +40,19 @@
   }
 
   .signature {
-    @include Display(row, center, center);
-    background-color: $BackgroundNav;
-    color: #FFFFFF;
-    height: 100px;
-    font-family:"Arial Rounded MT Bold";
+    background-image: url("../Assets/Wave.svg");
+    background-size: cover;
+    position: relative;
+    height: 400px;
+    width: 100%;
+
+    span {
+      color: #595959;
+      position: absolute;
+      right: 40%;
+      top: 70%;
+
+    }
   }
 }
 
@@ -52,9 +62,9 @@
     width: 60% !important;
   }
   input, .contactForm:nth-child(5) {
-    height: 30px !important;
+    height: 50px !important;
   }
   textarea {
-    height: 100px !important;
+    height: 150px !important;
   }
 }

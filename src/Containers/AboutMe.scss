@@ -7,7 +7,8 @@
   z-index: 1;
   position: relative;
   overflow: hidden;
-padding-top: 65px;
+  padding-top: 85px;
+
   .contentَAboutMe {
     @include Display(row, space-between, flex-start);
     padding: 50px 0 50px 50px;
@@ -87,7 +88,7 @@ padding-top: 65px;
 
 @media only screen and (max-width: 600px) {
   .aboutMe {
-    margin-top: 70px!important;
+    margin-top: 70px !important;
     text-align: center;
 
     .contentَAboutMe {
@@ -114,18 +115,20 @@ padding-top: 65px;
     }
   }
 }
+
 @media only screen and (max-width: 360px) {
-  .contentَAboutMe{
+  .contentَAboutMe {
     width: 100% !important;
-    padding: 0!important;
+    padding: 0 !important;
   }
-  .textAboutMe{
+  .textAboutMe {
     border: $Border;
     border-radius: $BorderRadius;
     box-shadow: $BoxShadow;
     padding: 10px 10px;
   }
   .imgFrame {
-   display: none;}
-
+    display: none;
   }
+
+}

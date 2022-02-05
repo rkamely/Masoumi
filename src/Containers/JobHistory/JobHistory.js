@@ -1,15 +1,15 @@
 import React from "react";
-
-import './JobHistory.scss';
 import SegmentTitle from "../../Components/SegmentTitle";
 import Experience from "./Experience";
 
+import './JobHistory.scss';
+import experience from '../../Assets/experience.png'
 
 function JobHistory() {
 
     return (
         <section className='experience'>
-            <SegmentTitle title={"تجربیات من"}/>
+            <SegmentTitle title={"تجربیات من"} src={experience} alt={'تجربیات من'}/>
             <div className="parent">
                 <div className='rightSide'>
                     <Experience jobTitle={'مدیری فروش'} company={'دیجی کالا'}

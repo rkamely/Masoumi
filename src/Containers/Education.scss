@@ -4,13 +4,13 @@
 .Education {
   width: 90%;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 80px;
 
   .universities {
     @include Display(row, space-between, flex-start);
     border: $Border;
     border-radius: $BorderRadius;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 10px;
     box-shadow: $BoxShadow;
 
@@ -22,7 +22,7 @@
       width: 75%;
     }
 
-    img {
+    .uniLogo {
       width: 20%;
       border-radius: 10%;
       margin: 10px;
@@ -33,7 +33,7 @@
 
 @media only screen and (max-width: 600px) {
   .Education {
-    img {
+    .uniLogo {
       display: none;
     }
 

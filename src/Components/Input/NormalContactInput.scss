@@ -8,7 +8,7 @@
   padding: 0 10px;
   outline: none;
   border: $Border;
-  height: 40px;
+  height: 70px;
   border-radius: $BorderRadius;
   transition: 0.25s linear;
 
@@ -20,7 +20,7 @@
 
 
 ::placeholder {
-  color: $FontColor;
-  font-size: 1vw;
+  color: $PlaceholderColor;
+  font-size: 2vw;
   opacity: .8;
 }

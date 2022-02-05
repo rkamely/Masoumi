@@ -2,10 +2,17 @@
 @import "src/Constants/Variables";
 
 .SegmentTitle {
+  @include Display(row, space-between, center);
   width: 100%;
   margin: auto;
   border-bottom: $Border;
   align-self: center;
+  padding-left: 20px;
+
+  img {
+    width: 30%;
+
+  }
 
   h1 {
     margin: 0;

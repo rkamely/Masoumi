@@ -2,23 +2,27 @@
 @import "../../Constants/Variables";
 
 .experience {
-  width: 80%;
+  width: 100%;
   margin: auto;
-  padding-top: 50px;
-
+  padding-top: 80px;
+>:nth-child(1){
+  padding-right: 3%;
+}
   .parent {
     @include Display(row, space-between, flex-start);
     margin-top: 100px;
+    background-image: url("../../Assets/Sprinkle.svg");
+    padding: 0 5%;
 
     .rightSide {
-      width: 48%;
+      width: 49%;
 
       > * {
         border: $Border;
         border-radius: $BorderRadius;
         box-shadow: $BoxShadow;
-        padding: 10px 20px;
         margin: 15px auto;
+        background-color: #FFFFFF;
 
       }
     }
@@ -26,14 +30,14 @@
 
   .leftSide {
     margin-top: 200px;
-    width: 48%;
+    width: 49%;
 
     > * {
       border: $Border;
       border-radius: $BorderRadius;
       box-shadow: $BoxShadow;
-      padding: 10px 20px;
       margin: 15px auto;
+      background-color: #FFFFFF;
 
     }
   }

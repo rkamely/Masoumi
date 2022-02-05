@@ -2,13 +2,13 @@ import React from "react";
 import SegmentTitle from "../Components/SegmentTitle";
 
 import './AboutMe.scss';
-
+import aboutMe from '../Assets/aboutMe2.png'
 
 function AboutMe() {
 
     return (
         <section className='aboutMe'>
-            <SegmentTitle title={"درباره من"}/>
+            <SegmentTitle title={"درباره من"} src={aboutMe} alt={'درباره من'}/>
             <div className='contentَAboutMe'>
                 <p
                     className='textAboutMe'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده

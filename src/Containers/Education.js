@@ -3,14 +3,16 @@ import SegmentTitle from "../Components/SegmentTitle";
 
 import './Education.scss';
 
+import education from "../Assets/education.png";
+
 
 function Education() {
 
     return (
         <section className='Education'>
-            <SegmentTitle title={"سوابق تحصیلی"}/>
+            <SegmentTitle title={"سوابق تحصیلی"} src={education} alt={'درباره من'}/>
             <div className='universities'>
-                <img
+                <img className='uniLogo'
                     src="https://kamapress.com/wp-content/uploads/2019/11/%D8%AF%DB%8C-%D8%AC%DB%8C-%DA%A9%D8%A7%D9%84%D8%A7-.jpg"
                     alt=""/>
                 <div className='descriptions'>
@@ -46,7 +48,7 @@ function Education() {
                         اساسا مورد استفاده قرار گیرد.
                     </p>
                 </div>
-                <img
+                <img className='uniLogo'
                     src="https://kamapress.com/wp-content/uploads/2019/11/%D8%AF%DB%8C-%D8%AC%DB%8C-%DA%A9%D8%A7%D9%84%D8%A7-.jpg"
                     alt=""/>
             </div>
