@@ -8,6 +8,7 @@
   margin: 20px auto;
   background: #75C0BB;
   color: $FontColor;
+  max-width: 900px;
   width: 60%;
   height: 70px;
   border: 0;
@@ -58,13 +59,13 @@
     color: #FFFFFF;
 
     &:before {
-      transform: translateX(600px) skewX(-15deg);
+      transform: translateX(1000px) skewX(-15deg);
       opacity: 0.6;
       transition: 1.2s;
     }
 
     &:after {
-      transform: translateX(600px) skewX(-15deg);
+      transform: translateX(1000px) skewX(-15deg);
       opacity: 1;
       transition: 1.2s;
     }

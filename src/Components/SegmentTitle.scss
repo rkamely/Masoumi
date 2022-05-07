@@ -7,17 +7,18 @@
   margin: auto;
   border-bottom: $Border;
   align-self: center;
-  padding-left: 20px;
+
 
   img {
     width: 30%;
-
   }
 
   h1 {
     margin: 0;
     color: $FontColor;
-    text-align: right
+    text-align: right;
+    font-size: 6vw!important;
+
   }
 
 }

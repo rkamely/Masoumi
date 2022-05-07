@@ -5,7 +5,7 @@ import './ButtonContactMe.scss';
 
 function ButtonContactMe(props) {
     return (
-        <button className='ButtonContactMe'> {props.content} </button>
+        <button className='ButtonContactMe' type={"submit"}> {props.content} </button>
 
     );
 }

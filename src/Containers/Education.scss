@@ -7,24 +7,27 @@
   padding-top: 80px;
 
   .universities {
-    @include Display(row, space-between, flex-start);
-    border: $Border;
+    @include Display(column, center, center);
     border-radius: $BorderRadius;
     margin: 20px auto;
-    padding: 10px;
+    padding: 30px;
     box-shadow: $BoxShadow;
 
-    h3, h4, h5, h6, p {
+    h3, h4, h5, h6 {
       margin: 5px 0 !important;
     }
 
     .descriptions {
-      width: 75%;
+      @include Display(row-reverse, space-between, center);
+      width: 100%;
+      >p{
+        margin: 20px auto;
+      }
     }
 
     .uniLogo {
-      width: 20%;
-      border-radius: 10%;
+      width: 10%;
+      resize: both;
       margin: 10px;
 
     }
@@ -32,16 +35,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .Education {
-    .uniLogo {
-      display: none;
-    }
-
-    .descriptions {
+       .descriptions {
       width: 100% !important
     }
-  }
-
 
 }
 

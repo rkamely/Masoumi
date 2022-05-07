@@ -1,0 +1,32 @@
+@import "../../Constants/Mixin";
+@import "../../Constants/Variables";
+
+.ThemeBtn {
+  @include Display(row, center, center);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  font-size: 1.8vw;
+  animation: s .25s forwards ;
+}
+
+@keyframes s {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) rotateZ(-30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) ;
+
+  }
+
+}
+
+
+
+
+

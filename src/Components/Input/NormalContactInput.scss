@@ -14,13 +14,17 @@
 
 
   &:focus {
-    box-shadow: $BoxShadow ;
+    box-shadow: $BoxShadow;
+  }
+
+  @media only screen and (max-width: 992px) {
+    height: 40px;
   }
 }
 
 
 ::placeholder {
   color: $PlaceholderColor;
-  font-size: 2vw;
+  font-size: 1.5vw;
   opacity: .8;
 }

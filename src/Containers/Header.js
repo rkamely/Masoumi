@@ -1,26 +1,14 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
 import {scroller} from "react-scroll";
+import HamburgerButton from "../Components/Button/HamburgerButton";
+import ThemeBtn from "../Components/Button/ThemeBtn";
 
 import './Header.scss';
-import HamburgerButton from "../Components/Button/HamburgerButton";
 
 
 function Header() {
+
     const [open, setOpen] = useState(false)
-    // let prevScrollPos = window.pageYOffset;
-    //
-    // window.onscroll = function () {
-    //     let currentScrollPos = window.pageYOffset;
-    //     if (prevScrollPos > currentScrollPos) {
-    //         {
-    //             document.getElementById("Header").style.height = "50px";
-    //             document.getElementById("Header").style.opacity = "1";
-    //         }
-    //     } else {
-    //         document.getElementById("Header").style.height = "65px";
-    //     }
-    //     prevScrollPos = currentScrollPos;
-    // }
 
     const scrollToSection = (e) => {
         setOpen(false)
@@ -33,19 +21,20 @@ function Header() {
     const mobileMenu = () => {
         setOpen(!open)
     }
-    return (<div className='headerRelative'>
+    return (
+        <div className='headerRelative'>
             <nav id='Header' className="Header">
-                <div className='HamburgerBtn' onClick={mobileMenu}><HamburgerButton open={open} /></div>
+                <div className='HamburgerBtn' onClick={mobileMenu}><HamburgerButton open={open}/></div>
                 <div className={open ? 'rightSide' : 'closeRightSide'}>
-                    <button onClick={() => scrollToSection('aboutMe')}>درباره من</button>
-                    <button onClick={() => scrollToSection('experience')}>تجربیات</button>
-                    <button onClick={() => scrollToSection('Skills')}>مهارت ها</button>
-                    <button onClick={() => scrollToSection('Education')}>تحصیلات</button>
-                    <button onClick={() => scrollToSection('Footer')}>تماس با من</button>
-
+                    <button onClick={() => scrollToSection('aboutMe')}>About Me</button>
+                    <button onClick={() => scrollToSection('experience')}>Experience</button>
+                    <button onClick={() => scrollToSection('Skills')}>Skills</button>
+                    <button onClick={() => scrollToSection('Education')}>Education</button>
+                    <button onClick={() => scrollToSection('Footer')}>Contact Me</button>
                 </div>
                 <div className='leftSide'>
-                    سامان
+                    <div>Reza kameli</div>
+                    <ThemeBtn/>
                 </div>
             </nav>
         </div>

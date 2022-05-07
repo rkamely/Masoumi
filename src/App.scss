@@ -1,59 +1,51 @@
 @import "src/Constants/Mixin";
 @import "src/Constants/Variables";
 
-@font-face {
-  font-family: "Abel";
-  src: local('Abel'), url('./Assets/iransans.woff') format('truetype');
-}
+//@font-face {
+//  font-family: "Abel";
+//  src: local('Abel'), url('./Assets/Abel-Regular.ttf') format('truetype');
+//}
 
 .App {
   background-color: $Background-color;
   height: auto;
 
-  * {
+  *, :before, :after{
     box-sizing: border-box;
     text-decoration: none;
-    direction: rtl;
-    font-family: 'Abel';
+    direction: ltr;
+    font-family: cursive;
     scroll-behavior: smooth;
+    color: $FontColor;
+    text-align: justify;
 
   }
 
   h1 {
-    font-size: 3.5vw;
-    color: $FontColor;
-
+    font-size: 3vw;
   }
 
   h2 {
-    font-size: 2.2vw;
-    color: $FontColor;
-
+    font-size: 2.5vw;
   }
 
   h3 {
     font-size: 2vw;
-    color: $FontColor;
-
   }
 
   h4 {
     font-size: 1.8vw;
-    color: $FontColor;
-
   }
 
   h5 {
     font-size: 1.4vw;
-    color: $FontColor;
-
   }
 
   p {
-    font-size: 1.8vw;
-    text-align: justify;
-    color: $FontColor;
-
+    font-size: 2vw;
+    text-indent: 15px;
+    line-height: 1.5;
+    word-spacing: 0;
   }
   @media only screen and (max-width: 600px){
 

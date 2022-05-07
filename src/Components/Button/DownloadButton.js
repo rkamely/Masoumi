@@ -7,7 +7,7 @@ function DownloadButton() {
 
 
     return (
-        <button className='downloadBtn'>دانلود رزومه من</button>
+        <button className='downloadBtn'>Download My Resume</button>
     );
 }
 

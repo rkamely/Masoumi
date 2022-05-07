@@ -1,56 +1,62 @@
-import React from "react";
+import React, {useContext} from "react";
 import SegmentTitle from "../Components/SegmentTitle";
-
+import KharazmiLogo from './../Assets/KharazmiLogo.png'
+import AzzadUni from './../Assets/AzadUniversity.png'
 import './Education.scss';
 
 import education from "../Assets/education.png";
+import SwitchContext from "../Context/ThemeSwitch";
 
 
 function Education() {
+    const {lightTheme} = useContext(SwitchContext);
 
     return (
         <section className='Education'>
-            <SegmentTitle title={"سوابق تحصیلی"} src={education} alt={'درباره من'}/>
-            <div className='universities'>
-                <img className='uniLogo'
-                    src="https://kamapress.com/wp-content/uploads/2019/11/%D8%AF%DB%8C-%D8%AC%DB%8C-%DA%A9%D8%A7%D9%84%D8%A7-.jpg"
-                    alt=""/>
-                <div className='descriptions'>
-                    <h3>دانشگاه شریف</h3>
-                    <h4>مهندسی صنایع گرایش تحلیل سیستم ها</h4>
-                    <h5>کارشناسی</h5>
-                    <h6>1380 - 1390</h6>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
-                        مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-                        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری
-                        را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-                        صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
-                        زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
-                        اساسا مورد استفاده قرار گیرد.
-                    </p>
-                </div>
-            </div>
-            <div className='universities'>
+            <SegmentTitle title={"Education"} src={education} alt={'Education'}/>
+            <div className='universities'
+                 style={lightTheme ? {} : {background: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(17,36,37,1) 100%)"}}>
 
                 <div className='descriptions'>
-                    <h3>دانشگاه شریف</h3>
-                    <h4>مهندسی صنایع گرایش تحلیل سیستم ها</h4>
-                    <h5>کارشناسی</h5>
-                    <h6>1380 - 1390</h6>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
-                        مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-                        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری
-                        را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
-                        صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و
-                        زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
-                        اساسا مورد استفاده قرار گیرد.
-                    </p>
+                    <img className='uniLogo'
+                         src={KharazmiLogo}
+                         alt=""/>
+                    <div>
+                        <h2  style={lightTheme ? {} : {color: "#a9a9a9"}}>Kharazmi University</h2>
+                        <h3  style={lightTheme ? {} : {color: "#a9a9a9"}}>Master Business Administration</h3>
+                        <h4  style={lightTheme ? {} : {color: "#a9a9a9"}}>Master Degree</h4>
+                        <h6  style={lightTheme ? {} : {color: "#a9a9a9"}}>2020 - 2022</h6>
+                    </div>
                 </div>
-                <img className='uniLogo'
-                    src="https://kamapress.com/wp-content/uploads/2019/11/%D8%AF%DB%8C-%D8%AC%DB%8C-%DA%A9%D8%A7%D9%84%D8%A7-.jpg"
-                    alt=""/>
+                <p  style={lightTheme ? {} : {color: "#a9a9a9"}}>Kharazmi University is a major public research university in Iran, named after Khwarizmi (c.
+                    780–850), Persian mathematician, astronomer and geographer, offering a wide range of
+                    undergraduate and postgraduate programs in a variety of disciplines. Kharazmi University is
+                    considered as the oldest institution of higher education in Iran. It was established in 1919 as
+                    the Central Teachers' Institute and gained university status as Tarbiat Moallem University of
+                    Tehran in 1974. It changed its name to Kharazmi University on January 31, 2012.
+                </p>
+            </div>
+            <div className='universities'
+                 style={lightTheme ? {} : {background: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(17,36,37,1) 100%)"}}>
+                <div className='descriptions'>
+
+                    <img className='uniLogo'
+                         src={AzzadUni}
+                         alt=""/>
+                    <div >
+                        <h2  style={lightTheme ? {} : {color: "#a9a9a9"}}>Islamic Azad University, North Tehran Branch</h2>
+                        <h3  style={lightTheme ? {} : {color: "#a9a9a9"}}>Industrial Engineering</h3>
+                        <h4  style={lightTheme ? {} : {color: "#a9a9a9"}}>Bachelor Degree</h4>
+                        <h5  style={lightTheme ? {} : {color: "#a9a9a9"}}>2007 - 2012</h5>
+                    </div>
+                </div>
+                <p  style={lightTheme ? {} : {color: "#a9a9a9"}}>
+                    The Islamic Azad University, North Tehran Branch is a branch of the Islamic Azad University. It
+                    was founded in 1985 and currently has an enrollment of 34,864 students. The university offers
+                    bachelor's degrees, master's degrees and Ph.D.s in 10 colleges. It is located in
+                    Hakimiyeh-Tehran Pars, Tehran. The educational area of the university is 35,000 square metres.
+                </p>
+
             </div>
 
         </section>

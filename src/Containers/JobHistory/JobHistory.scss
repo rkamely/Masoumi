@@ -3,44 +3,31 @@
 
 .experience {
   width: 100%;
-  margin: auto;
-  padding-top: 80px;
+  margin:  auto ;
+
 >:nth-child(1){
-  padding-right: 3%;
+  width: 90%;
 }
   .parent {
-    @include Display(row, space-between, flex-start);
-    margin-top: 100px;
+    @include Display(column, space-between, flex-start);
+    margin: auto;
     background-image: url("../../Assets/Sprinkle.svg");
-    padding: 0 5%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    >*{
+      margin: 20px auto;
+      >*{
 
-    .rightSide {
-      width: 49%;
-
-      > * {
-        border: $Border;
         border-radius: $BorderRadius;
         box-shadow: $BoxShadow;
         margin: 15px auto;
         background-color: #FFFFFF;
-
+        padding: 20px;
       }
     }
-  }
 
-  .leftSide {
-    margin-top: 200px;
-    width: 49%;
-
-    > * {
-      border: $Border;
-      border-radius: $BorderRadius;
-      box-shadow: $BoxShadow;
-      margin: 15px auto;
-      background-color: #FFFFFF;
-
-    }
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -57,10 +44,10 @@
 
       > * {
         border-bottom: $Border;
-        margin: 10px 0 !important;
+        margin:auto;
 
       }
     }
   }
 
-}
+}}

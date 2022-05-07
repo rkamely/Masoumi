@@ -8,10 +8,11 @@
 
   .skillItems {
     width: 80%;
-    margin: 20px auto 0 auto;
+    margin: 50px auto 0 auto;
 
-    h1, h3 {
-      margin: 0;
+    h1, h4 {
+      margin: 0 !important;
+
     }
 
     .item {
@@ -35,8 +36,14 @@
       }
 
       .contentSkills {
+        direction: rtl !important;
         margin-right: 15px;
-        width: 50%;
+        width: 70%;
+
+        > :nth-child(1) {
+          margin-bottom: 10px;
+
+        }
 
       }
 
@@ -58,6 +65,7 @@
           border-radius: 50%;
           background-image: linear-gradient(to left, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
           font-size: 6vw;
+          color: #0a2f2e;
 
         }
       }
@@ -67,9 +75,10 @@
       @include Display(row-reverse, flex-start, center);
       background-image: linear-gradient(to right, #d3fbd8, #cdfef6, #ddfeff, #f4fdff, #ffffff);
       border-radius: 90px 0 0 90px;
-      padding: 0;
+      padding: 10px 0 !important;
       position: relative;
       height: 180px;
+      direction: ltr;
 
       .shadow2 {
         box-shadow: -16px 13px 14px -10px #324b4c;
@@ -84,11 +93,12 @@
 
       .contentSkills {
         margin-left: 15px;
-        width: 50%;
+        width: 70%;
 
-        h1 {
-          direction: rtl;
+        > :nth-child(1) {
+          margin-bottom: 10px;
         }
+
 
       }
 
@@ -109,7 +119,7 @@
           border-radius: 50%;
           background-image: linear-gradient(to left, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
           font-size: 6vw;
-
+          color: #0a2f2e;
         }
 
       }
@@ -117,16 +127,20 @@
   }
 
 }
-@media only screen and (max-width: 600px){
-  .item , .item2{
-    height: 90px!important;
+
+@media only screen and (max-width: 900px) {
+  .item, .item2 {
+    height: 90px !important;
   }
-  .number , .number2{
-    height: 70px!important;
-    width: 70px!important;
-    span{
-      width: 50px!important;
-      height: 50px!important;
+  .number, .number2 {
+    height: 70px !important;
+    width: 70px !important;
+
+    span {
+      width: 50px !important;
+      height: 50px !important;
+      font-size: 4vw !important;
+
     }
   }
 }
