@@ -1,0 +1,13 @@
+@import "../Constants/Mixin";
+@import "../Constants/Variables";
+
+
+.loading {
+  @include Display(row, center, center);
+  overflow: hidden;
+  height: 100vh;
+  img {
+    object-fit: cover;
+    width: 50%;
+  }
+}
