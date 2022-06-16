@@ -21,7 +21,6 @@
       margin-top: 45px;
       width: 200px;
       height: 200px;
-      background-color: #DDFFF7;
       position: relative;
       box-shadow: 10px 10px 42px 0 rgba(0, 0, 0, 0.75);
       background-image: url("./../Assets/MyPic.png");
@@ -57,12 +56,12 @@
 
     .imgFrame:after {
       animation-delay: -5s;
-      background-color: #93e1d8;
+      background-color: #69ADB0;
       clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
     }
 
     .imgFrame:before {
-      background-color: #AA4465;
+      background-color: #233f41;
       clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
     }
   }
@@ -88,31 +87,28 @@
 
 @media only screen and (max-width: 600px) {
   .aboutMe {
-    margin-top: 70px !important;
     text-align: center;
 
     .contentَAboutMe {
-      @include Display(row-reverse, space-around, center);
+      @include Display(column-reverse, space-between, center);
       width: 90%;
       padding: 10px 0 !important;
       margin: auto !important;
 
       .textAboutMe {
-        width: 70% !important;
+        width: 100% !important;
+        margin-top: 3rem;
       }
     }
 
     .imgFrame {
-      width: 80px !important;
-      height: 80px !important;
+      width: 100px !important;
+      height: 100px !important;
       box-shadow: none !important;
       border-radius: 5px;
-
+      margin: 2rem auto!important;
     }
 
-    .imgFrame:after, .imgFrame:before {
-      display: none !important;
-    }
   }
 }
 
@@ -127,8 +123,6 @@
     box-shadow: $BoxShadow;
     padding: 10px 10px;
   }
-  .imgFrame {
-    display: none;
-  }
+
 
 }

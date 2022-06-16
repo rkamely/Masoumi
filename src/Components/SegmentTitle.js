@@ -4,14 +4,17 @@ import SwitchContext from "../Context/ThemeSwitch";
 import './SegmentTitle.scss';
 
 
-function SegmentTitle(props) {
+function SegmentTitle({src,alt,title}) {
     const {lightTheme} = useContext(SwitchContext);
 
     return (
-        <div className='SegmentTitle'>
-            <h1 style={lightTheme ? {} : {color: "#a9a9a9"}}>{props.title}</h1>
-            <img src={props.src} alt={props.alt}/>
+
+
+        <div className='SegmentTitle' >
+            <h1 style={lightTheme ? {} : {color: "#a9a9a9"}}>{title}</h1>
+            <img src={src} alt={alt}/>
         </div>
+
     );
 }
 

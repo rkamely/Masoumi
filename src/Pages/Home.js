@@ -1,5 +1,4 @@
-import React, {useContext} from "react";
-import Slider from './../Containers/Slider'
+import React from "react";
 import AboutMe from "../Containers/AboutMe";
 import JobHistory from "../Containers/JobHistory/JobHistory";
 import Skills from "../Containers/Skills";

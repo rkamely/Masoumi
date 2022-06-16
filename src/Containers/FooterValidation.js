@@ -9,13 +9,13 @@ const FooterValidation = (contactUsInfo) => {
               if (contactUsInfo.email === "" || contactUsInfo.email === undefined) {
             errors['email'] = 'Please type your email.';
             reject(errors);
-        } else if (!emailCheckRegex.test(contactUsInfo.emailShop)) {
+        } else if (emailCheckRegex.test(contactUsInfo.email)) {
             errors['email'] = 'your email address is not valid';
             reject(errors);
         }
 
         if (contactUsInfo.message === "" || contactUsInfo.message === undefined) {
-            errors['message'] = 'please Type your message. ';
+            errors['message'] = 'Please type your message. ';
             reject(errors);
         }
         resolve(true)

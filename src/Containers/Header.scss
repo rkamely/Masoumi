@@ -7,8 +7,7 @@
   .Header {
     @include Display(row, space-between, center);
     padding: 0 10px;
-    background: linear-gradient(90deg, rgba(63,132,136,1) 0%, rgba(167,217,219,1) 100%);
-    opacity: .9;
+    background: linear-gradient(90deg, rgba(63, 132, 136, .8) 0%, rgba(140, 217, 220, .8) 100%);
     backdrop-filter: blur(3px);
     position: fixed;
     top: 0;
@@ -29,7 +28,7 @@
     .rightSide, .closeRightSide {
       @include Display(row, flex-start, stretch);
       width: 60%;
-
+      font-weight: 0 !important;
 
       > * {
         text-align: center;
@@ -40,9 +39,9 @@
         cursor: pointer;
         transition: .1s linear;
         font-size: 2vw;
-        padding: 18px 10px;
-        font-weight: bolder;
+        padding: 13px 10px;
         position: relative;
+
 
         &:after {
           content: '';
@@ -68,21 +67,171 @@
     .leftSide {
       @include Display(row, space-between, center);
       font-size: 2.5vw;
-      font-weight: bolder;
       align-self: center;
 
-      > * {
+
+      img {
+        cursor: pointer;
+        @media only screen and (max-width: 900px) {
+          width: 24px !important;
+          margin-left: .5rem;
+
+        }
+      }
+
+      > :nth-child(1) {
         margin: auto 10px;
+      }
+
+      .logout {
+        @include Display(row, space-between, center);
+
+        > a {
+          cursor: pointer;
+          padding: 0.25rem;
+          border-radius: $BorderRadius;
+          transition: .1s;
+          text-decoration: none;
+
+          &:hover {
+            transform: scale(1.01);
+            box-shadow: 0px 0px 20px 2px #148c82;
+          }
+        }
+
+        > img {
+          margin-left: 1rem;
+        }
+      }
+
+      .loginForm {
+        @include Display(column, center, center);
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2000;
+        left: 50%;
+        top: -10px;
+        transform: translate(-50%, 0);
+
+
+        form {
+          @include Display(column, center, center);
+          background-color: $Background-color;
+          height: 450px;
+          width: 40%;
+          border-radius: $BorderRadius;
+          z-index: 2500;
+          animation: popUp .5s ease-in-out;
+          @media only screen and (max-width: 600px) {
+            width: 70%;
+          }
+
+          span {
+            font-size: 1rem;
+          }
+
+          h1 {
+            color: $Background-color-dark;
+            margin: 1rem 0 !important;
+          }
+
+          input {
+            margin: .75rem auto;
+            background-color: inherit !important;
+          }
+
+          button {
+            @include Display(row, center, center);
+            position: relative;
+            background: #75C0BB;
+            color: $FontColor;
+            width: 200px;
+            margin: .75rem auto;
+            height: 50px;
+            border: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-radius: $BorderRadius;
+            transition: .5s;
+            overflow: hidden;
+
+            &:focus {
+              outline: 0;
+            }
+
+            &:before {
+              content: '';
+              display: block;
+              position: absolute;
+              background: rgba(255, 255, 255, 0.5);
+              width: 60px;
+              height: 100%;
+              left: 0;
+              top: 0;
+              opacity: .5;
+              filter: blur(30px);
+              transform: translateX(-100px) skewX(-15deg);
+            }
+
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              background: rgba(255, 255, 255, 0.2);
+              width: 30px;
+              height: 100%;
+              left: 30px;
+              top: 0;
+              opacity: 0;
+              filter: blur(5px);
+              transform: translateX(-100px) skewX(-15deg);
+            }
+
+            &:hover {
+              background: #2B6766;
+              cursor: pointer;
+              color: #FFFFFF;
+
+              &:before {
+                transform: translateX(300px) skewX(-15deg);
+                opacity: 0.6;
+                transition: 1.2s;
+              }
+
+              &:after {
+                transform: translateX(300px) skewX(-15deg);
+                opacity: 1;
+                transition: 1.2s;
+              }
+            }
+
+            @media only screen and (max-width: 600px) {
+              font-size: .7rem;
+              font-weight: 1000;
+              width: 40%;
+              height: 30px;
+            }
+          }
+        }
       }
     }
 
 
   }
 
-
+  @keyframes popUp {
+    from {
+      transform: scale(.25);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .headerRelative {
     position: relative;
 
@@ -111,7 +260,6 @@
         top: 40px;
         background-color: $BackgroundNav;
         width: 30% !important;
-        opacity: .8;
         transition: height 1s;
 
         > * {

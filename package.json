@@ -1,8 +1,11 @@
 {
-  "name": "privet-site",
+  "name": "privet-site-masoumi",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.3.0",
     "@mui/material": "^5.3.0",
     "@mui/styled-engine-sc": "^5.3.0",
@@ -19,6 +22,7 @@
     "react-scroll": "^1.8.4",
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.3",
+    "validator": "^13.7.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

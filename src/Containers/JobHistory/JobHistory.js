@@ -3,10 +3,13 @@ import SegmentTitle from "../../Components/SegmentTitle";
 import Experience from "./Experience";
 import experience from '../../Assets/experience.png'
 import firstStar from '../../Assets/SetarehAvalLogo.png'
-import './JobHistory.scss';
 import SwitchContext from "../../Context/ThemeSwitch";
 
+import './JobHistory.scss'
+
 function JobHistory() {
+    const {jobHistory} = useContext(SwitchContext);
+
     const frontendDevStar =
         {
             jobTitle: 'Frontend Developer',
@@ -52,41 +55,58 @@ function JobHistory() {
             logoCompany: {firstStar},
         }
     const {lightTheme} = useContext(SwitchContext);
-
     return (
         <section className='experience'>
             <SegmentTitle title={"My Experience"} src={experience} alt={'My Experience'}/>
             <div className="parent">
-                <div className='rightSide'>
-                    <Experience jobTitle={frontendDevStar.jobTitle} company={frontendDevStar.companyName}
-                                time={frontendDevStar.time}
-                                Duties={
-                                    frontendDevStar.task.map(item =>
-                                        <p key={item.index} style={lightTheme ? {} : {color: "#a9a9a9"}}>{item}</p>
-                                    )
-                                }
-                                achievements={
-                                    frontendDevStar.achievements.map(item =>
-                                        <p key={item.index} style={lightTheme ? {} : {color: "#a9a9a9"}}>{item}</p>
-                                    )
-                                }
-                                img={frontendDevStar.logoCompany.firstStar}/>
-                </div>
-                <div className='leftSide'>
-                        <Experience jobTitle={digitalMarketerStar.jobTitle} company={digitalMarketerStar.companyName}
-                                    time={digitalMarketerStar.time}
+                {jobHistory.map((item) =>
+                    <div className='rightSide'>
+                        <Experience jobTitle={item.jobTitle} company={item.companyName}
+                                    time={item.time}
                                     Duties={
-                                        digitalMarketerStar.task.map(item =>
+                                        item.task.map(item =>
                                             <p key={item.index} style={lightTheme ? {} : {color: "#a9a9a9"}}>{item}</p>
                                         )
                                     }
                                     achievements={
-                                        digitalMarketerStar.achievements.map(item =>
+                                        item.achievements.map(item =>
                                             <p key={item.index} style={lightTheme ? {} : {color: "#a9a9a9"}}>{item}</p>
                                         )
-                                        }
-                                    img={digitalMarketerStar.logoCompany.firstStar}/>
-                </div>
+                                    }
+                                    img={item.logoCompany.firstStar}/>
+                    </div>)}
+
+
+                {/*<div className='rightSide'>*/}
+                {/*    <Experience jobTitle={frontendDevStar.jobTitle} company={frontendDevStar.companyName}*/}
+                {/*                time={frontendDevStar.time}*/}
+                {/*                Duties={*/}
+                {/*                    frontendDevStar.task.map(item =>*/}
+                {/*                        <p key={item.index} style={lightTheme ? {} : {color: "#a9a9a9"}}>{item}</p>*/}
+                {/*                    )*/}
+                {/*                }*/}
+                {/*                achievements={*/}
+                {/*                    frontendDevStar.achievements.map(item =>*/}
+                {/*                        <p key={item.index} style={lightTheme ? {} : {color: "#a9a9a9"}}>{item}</p>*/}
+                {/*                    )*/}
+                {/*                }*/}
+                {/*                img={frontendDevStar.logoCompany.firstStar}/>*/}
+                {/*</div>*/}
+                {/*<div className='leftSide'>*/}
+                {/*    <Experience jobTitle={digitalMarketerStar.jobTitle} company={digitalMarketerStar.companyName}*/}
+                {/*                time={digitalMarketerStar.time}*/}
+                {/*                Duties={*/}
+                {/*                    digitalMarketerStar.task.map(item =>*/}
+                {/*                        <p key={item.index} style={lightTheme ? {} : {color: "#a9a9a9"}}>{item}</p>*/}
+                {/*                    )*/}
+                {/*                }*/}
+                {/*                achievements={*/}
+                {/*                    digitalMarketerStar.achievements.map(item =>*/}
+                {/*                        <p key={item.index} style={lightTheme ? {} : {color: "#a9a9a9"}}>{item}</p>*/}
+                {/*                    )*/}
+                {/*                }*/}
+                {/*                img={digitalMarketerStar.logoCompany.firstStar}/>*/}
+                {/*</div>*/}
             </div>
         </section>
     );

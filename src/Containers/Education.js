@@ -15,7 +15,7 @@ function Education() {
         <section className='Education'>
             <SegmentTitle title={"Education"} src={education} alt={'Education'}/>
             <div className='universities'
-                 style={lightTheme ? {} : {background: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(17,36,37,1) 100%)"}}>
+                 style={lightTheme ? {} : {background: "radial-gradient(circle, rgb(9 17 18) 0%, rgb(21 42 42 / 28%) 100%)"}}>
 
                 <div className='descriptions'>
                     <img className='uniLogo'

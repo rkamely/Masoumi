@@ -10,10 +10,10 @@
     width: 80%;
     margin: 50px auto 0 auto;
 
-    h1, h4 {
+    h2, h5 {
       margin: 0 !important;
-
     }
+
 
     .item {
       @include Display(row, flex-start, center);
@@ -38,10 +38,11 @@
       .contentSkills {
         direction: rtl !important;
         margin-right: 15px;
-        width: 70%;
+        width: 55%;
 
         > :nth-child(1) {
           margin-bottom: 10px;
+          white-space: nowrap;
 
         }
 
@@ -65,7 +66,7 @@
           border-radius: 50%;
           background-image: linear-gradient(to left, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
           font-size: 6vw;
-          color: #0a2f2e;
+          color: #FFFFFF;
 
         }
       }
@@ -93,10 +94,11 @@
 
       .contentSkills {
         margin-left: 15px;
-        width: 70%;
+        width: 55%;
 
         > :nth-child(1) {
           margin-bottom: 10px;
+          white-space: nowrap;
         }
 
 
@@ -119,7 +121,7 @@
           border-radius: 50%;
           background-image: linear-gradient(to left, #2b6766, #3d7c7a, #4f928f, #62a9a5, #75c0bb);
           font-size: 6vw;
-          color: #0a2f2e;
+          color: #FFFFFF;
         }
 
       }
@@ -129,10 +131,7 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .item, .item2 {
-    height: 90px !important;
-  }
-  .number, .number2 {
+   .number, .number2 {
     height: 70px !important;
     width: 70px !important;
 
@@ -144,3 +143,7 @@
     }
   }
 }
+@media only screen and (max-width: 768px) {
+  .item, .item2 {
+    height: 80px !important;
+  }}

@@ -10,7 +10,12 @@
   background-color: $Background-color;
   height: auto;
 
-  *, :before, :after{
+
+  body {
+    font-size: 16px
+  }
+
+  *, :before, :after {
     box-sizing: border-box;
     text-decoration: none;
     direction: ltr;
@@ -22,53 +27,59 @@
   }
 
   h1 {
-    font-size: 3vw;
+    font-size: 3.5rem;
+    white-space: nowrap;
+    text-align: left;
+
   }
 
   h2 {
-    font-size: 2.5vw;
+    font-size: 2.5rem;
+    text-align: left;
+
   }
 
   h3 {
-    font-size: 2vw;
+    font-size: 1.5rem;
   }
 
   h4 {
-    font-size: 1.8vw;
+    font-size: 1.25rem;
   }
 
   h5 {
-    font-size: 1.4vw;
+    font-size: 1rem;
   }
 
   p {
-    font-size: 2vw;
+    font-size: 1.3rem;
     text-indent: 15px;
     line-height: 1.5;
     word-spacing: 0;
   }
-  @media only screen and (max-width: 600px){
+
+  @media only screen and (max-width: 768px) {
 
     h1 {
-      font-size: 4vw;
+      font-size: 2rem;
     }
 
     h2 {
-      font-size: 2.5vw;
+      font-size: .9rem;
     }
 
     h3 {
-      font-size: 2.3vw;
+      font-size: .8rem;
     }
 
     h4 {
-      font-size: 2.1vw;
+      font-size: .6rem;
     }
     h5 {
-      font-size: 1.9vw;
+      font-size: .5rem;
     }
-    p{
-      font-size: 2.3vw;
+    p {
+      font-size: 1rem;
     }
 
   }

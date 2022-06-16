@@ -1,13 +1,14 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 import './DownloadButton.scss';
 
 
-function DownloadButton() {
+function DownloadButton({content,file}) {
 
 
     return (
-        <button className='downloadBtn'>Download My Resume</button>
+        <Link to={file} className='downloadBtn' download target="_blank">{content}</Link>
     );
 }
 

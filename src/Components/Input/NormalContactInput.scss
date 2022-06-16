@@ -11,7 +11,8 @@
   height: 70px;
   border-radius: $BorderRadius;
   transition: 0.25s linear;
-
+  color: $PlaceholderColor !important;
+  font-size: 1rem;
 
   &:focus {
     box-shadow: $BoxShadow;
@@ -25,6 +26,9 @@
 
 ::placeholder {
   color: $PlaceholderColor;
-  font-size: 1.5vw;
-  opacity: .8;
+  font-size: 1.1rem;
+  opacity: .6;
+  @media only screen and (max-width: 992px) {
+    font-size: .6rem;
+  }
 }

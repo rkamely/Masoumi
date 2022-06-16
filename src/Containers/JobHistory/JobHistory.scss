@@ -19,12 +19,11 @@
     >*{
       margin: 20px auto;
       >*{
-
         border-radius: $BorderRadius;
         box-shadow: $BoxShadow;
         margin: 15px auto;
-        background-color: #FFFFFF;
-        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 70px;
       }
     }
 
@@ -45,6 +44,7 @@
       > * {
         border-bottom: $Border;
         margin:auto;
+        padding: 30px;
 
       }
     }
