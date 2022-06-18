@@ -17,6 +17,17 @@
     margin: 10px auto;
     border-radius: 10px;
 
+    .goHome {
+      cursor: pointer;
+      @include Display(row, center, center);
+      margin-left: .5rem;
+
+      > img {
+        width: 32px!important;
+      }
+
+    }
+
     .HamburgerBtn {
       display: none;
     }
@@ -92,10 +103,11 @@
           border-radius: $BorderRadius;
           transition: .1s;
           text-decoration: none;
+          white-space: nowrap;
 
           &:hover {
             transform: scale(1.01);
-            box-shadow: 0px 0px 20px 2px #148c82;
+            box-shadow: 0 0 20px 2px #148c82;
           }
         }
 

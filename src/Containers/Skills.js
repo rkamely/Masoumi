@@ -20,10 +20,10 @@ function Skills() {
                     <div className='shadow'/>
                     <div className='number'><span>1</span></div>
                     <div className='contentSkills'>
-                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>React JS</h2>
-                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>An open-source JavaScript library that is used for building user interfaces specifically for
-                            single-page applications
-                        </h5>
+                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>Communication skills</h2>
+                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}> these professionals are regularly having to
+                            speak or write in a way that conveys their objectives and priorities in an
+                            easy-to-understand manner. </h5>
                     </div>
                 </div>
                 <div className='item2'
@@ -31,9 +31,10 @@ function Skills() {
                     <div className='shadow2'/>
                     <div className='number2'><span>2</span></div>
                     <div className='contentSkills'>
-                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>Javascript</h2>
-                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>JavaScript is a text-based programming language used both on the client-side and server-side
-                            that allows you to make web pages interactive.</h5>
+                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>Technical expertise</h2>
+                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>able to work with the engineers on my team
+                            to identify performance bugs and ensure the product is up to par in terms of function,
+                            design and user experience.</h5>
                     </div>
                 </div>
                 <div className='item'
@@ -41,9 +42,9 @@ function Skills() {
                     <div className='shadow'/>
                     <div className='number'><span>3</span></div>
                     <div className='contentSkills'>
-                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>CSS3-SASS-Emotion</h2>
-                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>Cascading Style Sheets is a stylesheet language used to describe the presentation of a
-                            document written in HTML or XML.</h5>
+                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>Business skills</h2>
+                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>understanding basic business competencies to
+                            effectively do their jobs</h5>
                     </div>
                 </div>
 
@@ -52,8 +53,10 @@ function Skills() {
                     <div className='shadow2'/>
                     <div className='number2'><span>4</span></div>
                     <div className='contentSkills'>
-                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>HTML 5</h2>
-                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>HTML (HyperText Markup Language) is the most basic building block of the Web</h5>
+                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>Research skills</h2>
+                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>These professionals regularly perform extensive
+                            market research to determine what type of products their consumers need as well as where the
+                            competition stands in relation to your organization. </h5>
                     </div>
                 </div>
                 <div className='item'
@@ -61,9 +64,9 @@ function Skills() {
                     <div className='shadow'/>
                     <div className='number'><span>5</span></div>
                     <div className='contentSkills'>
-                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>Redux - Context</h2>
-                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>Redux is simply a store to store the state of the variables in your app, Redux and Context
-                            are a state manager.</h5>
+                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>Analytical skills</h2>
+                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>analyze and use this data to make educated
+                            product decisions. </h5>
                     </div>
                 </div>
 
@@ -72,12 +75,13 @@ function Skills() {
                     <div className='shadow2'/>
                     <div className='number2'><span>6</span></div>
                     <div className='contentSkills'>
-                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>Other Skills</h2>
-                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}>Material Ui, Git, npm, Next JS, Photoshop, SEO, Office, Google analysis tools, ...</h5>
+                        <h2 style={lightTheme ? {} : {color: "#a9a9a9"}}>Marketing skills</h2>
+                        <h5 style={lightTheme ? {} : {color: "#a9a9a9"}}> Marketing skills include the ability to
+                            promote and deliver products and services in the most successful way possible.</h5>
                     </div>
                 </div>
             </div>
-            <DownloadButton content={"Download My Resume"} file={myResume}/>
+            <DownloadButton content={"Download My Resume"} file={"resume.pdf"}/>
         </section>
     );
 }

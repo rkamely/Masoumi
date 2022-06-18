@@ -4,7 +4,7 @@ import SwitchContext from './Context/ThemeSwitch'
 import Loading from "./Containers/Loading";
 
 import "./App.scss"
-import firstStar from "./Assets/SetarehAvalLogo.png";
+
 
 
 function App() {
@@ -21,57 +21,88 @@ function App() {
     const [userName, setUserName] = useState(JSON.parse(localStorage.getItem('owner')).userName || "ali")
     const [password, setPassword] = useState(JSON.parse(localStorage.getItem('owner')).password || "123")
 
-    let defaultAboutMe = " Innovative frontend developer with over 1 year of experience in developing and maintaining responsive websites focus on UI/UX interface in React JS library. Proficient in code development projects in modern working methodologies Plus, over 5 years of experience in marketing and SEO, make me a comprehensive perspective on different aspects of the business."
+    let defaultAboutMe = "I am Ali Masoumi, Highly capable product manager with 4+ years’ experience in fast-paced tech environments. Dedicated to developing innovative, valuable and successful products that meet customers’ needs. Collaborative and analytical with good business sense and strong interpersonal abilities."
     const [aboutMe, setAboutMe] = useState(JSON.parse(localStorage.getItem('aboutMe')) || defaultAboutMe)
 
     let defaultJobHistory = [
          {
              id:1,
-            jobTitle: 'Frontend Developer',
+            jobTitle: 'Product Manager',
             companyName: 'Setareh Aval',
-            time: '2021-Present',
-            task: ["Translate wireframes, graphical mock-ups, and prototypes into working web pages.",
-                "Develop and Implement landing pages for new campaigns by using Sass,Material UI, React Icon,….",
-                "Develop responsive Ui/UX interfaces.",
-                "Monitor and optimize websites and application continuously to improve user experience and increase CRT.",
-                "Implement new forms and modules based on sales and marketing department request.",
-                "Implement Restful APIs in website.",
-                "Upload new versions of project to Git repository for review and acceptance of team leader.",
-                "Use the most up to date standards and practices to assure the quality of the code."
+            time: '2016/11-Present',
+            task: [
+                "Understanding and representing user needs.",
+                "Monitoring the market and developing competitive analyses.",
+                "Defining a vision for a product.",
+                "Aligning stakeholders around the vision for the product. ",
+                "Prioritizing product features and capabilities.",
+                "Creating a shared brain across larger teams to empower independent decision-making.",
             ],
             achievements: [
-                "Implemented setaresim.com based on React technology",
-                "Implemented 3 responsive landing pages.",
-                "Developed and maintained a panel dashboard for B2B team and Implemented multiple graphs upon request of the sales team.",
-                "Implemented Cart by using redux technology.",
-                "Implemented Google map API.",
-                "Optimized websites for maximum speed and scalability.",
+                "Implemented mobile payment (MPS)",
+                "Implemented mobile payment based on NFC.",
+                "implemented and lunched USSD code *1# .",
+                "Get Pardakhtyari licence.",
             ],
-            logoCompany: {firstStar},
+            logoCompany:"SetarehAvalLogo.png" ,
         },
          {
              id:2,
-            jobTitle: 'Digital Marketing Specialist',
-            companyName: 'Setareh Aval',
-            time: '2016-2021',
+            jobTitle: 'Product Manager',
+            companyName: 'Sayan card',
+            time: '2015/08-2015/11',
             task: [
-                "Responsible for executing digital advertising campaigns in addition to assisting with the development of digital marketing strategies.",
-                "Continually test, analyze and optimize target criteria, content,landingpages to increase open, click and conversion rates.",
-                " Consult, design, implement and publish responsive designed registration web pages and templates to support marketing.",
-                "Used Google Analytics to track the effectiveness of social mediainitiatives. Optimization of Social media campaigns.",
-                "Expert in using web analytics tools like Google analytics, Web Trends in order to analyze Traffic trends, Visitor behavior, and measure success of SEO/SEM/PPC campaigns.",
-                "Produced monthly performance reports for clients for SEM programs utilizing reporting tools such as Google Analytics; determined key metrics that were of primary importance to clients and provided trending data to compare results month-by-month.",
+                "Help Create and Manage the Product Roadmap.",
+                "Execute and Manage the Product Vision.",
+                "Conduct Market Research to Look for Gaps.",
+                "Realize and Tackle Risk.",
+                "Collaborate and Communicate with the Product Team.",
             ],
             achievements: [
-                "Implemented SEO strategies for client websites including layout,content optimization, keyword structuring, etc.",
-                "Set up Google Adwords advertising campaigns including keywords and campaign filters for future marketing opportunities.",
-                "Implemented ECRM system for sending email and SMS based on our algorithm to returning them in website.",
+                "Developed offline switches",
             ],
-            logoCompany: {firstStar},
-        }
+            logoCompany: "sayan.png",
+        },
+        {
+            id:3,
+            jobTitle: 'Project Manager',
+            companyName: 'Shahr Bank',
+            time: '2014/09-2015/08',
+            task: [
+                "Setting project goals and coming up with plans to meet those goals.",
+                "Maintaining project timeframes, budgeting estimates and status reports.",
+                "Managing resources for projects, such as computer equipment and employees.",
+                "Coordinating project team members and developing schedules and individual responsibilities.",
+                "Implementing IT strategies that deliver projects on schedule and within budget.",
+                "Using project management tools to track project performance and schedule adherence.",
+                "Conducting risk assessments for projects.",
+                "Organizing meetings to discuss project goals and progress.",
+            ],
+            achievements: [
+                "Lunched intelligence citizen card issuance system.",
+                "lunched student citizenship card system.",
+                "lunched citizen card inspector system.",
+            ],
+            logoCompany: "shahr.jpg",
+        },
+        {
+            id:4,
+            jobTitle: 'IT Expert',
+            companyName: 'Ministry of Communications and Information Technology',
+            time: '2012/10-2014/05',
+            task: [
+                "Installing new software and hardware components.",
+                "Regularly evaluating our IT systems to ensure they meet the necessary demands.",
+                "Assisting with network administration tasks.",
+                "Ensuring data storage is safe and secure.",
+                "Resolving all issues coworkers have with their IT systems and software.",
+            ],
+            achievements: [
+            ],
+            logoCompany: "ministry.png",
+        },
     ]
     const [jobHistory, setJobHistory] = useState(JSON.parse(localStorage.getItem('jobHistory')) || defaultJobHistory)
-
 
 
     useEffect(() => {

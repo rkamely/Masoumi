@@ -2,10 +2,13 @@ import React, {useContext, useEffect, useState} from "react";
 
 
 import SwitchContext from "../Context/ThemeSwitch";
+import EditBtn from "../Components/Button/EditBtn";
+import './AdminJobHistory.scss'
+import NormalContactInput from "../Components/Input/NormalContactInput";
 
 
 function AdminJobHistory({job}) {
-    const {userName, login, aboutMe, setAboutMe, jobHistory, setJobHistory} = useContext(SwitchContext);
+    const {userName, login, aboutMe, setAboutMe, jobHistory, setJobHistory,lightTheme} = useContext(SwitchContext);
 
     //Update My Experience
     const [updateBtnJob, setUpdateBtnJob] = useState(false)
@@ -15,17 +18,17 @@ function AdminJobHistory({job}) {
 
     const [jobTitle, setJobTitle] = useState(job.jobTitle)
     const changeJobTitleHandler = (e) => {
-        setJobTitle(e.target.value)
+        setJobTitle(e)
     }
 
     const [companyName, setCompanyName] = useState(job.companyName)
     const companyNameHandler = (e) => {
-        setCompanyName(e.target.value)
+        setCompanyName(e)
     }
 
     const [time, setTime] = useState(job.time)
     const timeHandler = (e) => {
-        setTime(e.target.value)
+        setTime(e)
     }
 
 
@@ -42,71 +45,61 @@ function AdminJobHistory({job}) {
 
 
     }
-    console.log(job)
 
     const [addTask, setAddTask] = useState(false)
     const addTaskHandler = () => {
         setAddTask(!addTask)
     }
-    const addTaskFormHandler = (e) => {
-        e.preventDefault()
-        setAddTask(!addTask)
 
-    }
     const [addAchievement, setAddAchievement] = useState(false)
     const addAchievementHandler = () => {
         setAddAchievement(!addAchievement)
     }
-    const addAchievementFormHandler = (e) => {
-        e.preventDefault()
-        setAddAchievement(!addAchievement)
-    }
     return (
-        <div>
+        <div className='jobTitle'>
             {
                 updateBtnJob ?
                     <form onSubmit={formJobHistoryHandler}>
-                        <div>
-                            <span>Job title:</span>
-                            <input onChange={changeJobTitleHandler} type="text" value={jobTitle}
-                                   contentEditable={true}/>
+                        <div className='oneLineProperty'>
+                            <span style={lightTheme ? {} : {color: "#a9a9a9"}} >Job title:</span>
+                            <NormalContactInput inputOnchange={changeJobTitleHandler} type={"text"} value={jobTitle}/>
+
                         </div>
-                        <div>
-                            <span>Company name:</span>
-                            <input onChange={companyNameHandler} type="text" value={companyName}/>
+                        <div className='oneLineProperty'>
+                            <span style={lightTheme ? {} : {color: "#a9a9a9"}} >Company name:</span>
+                            <NormalContactInput inputOnchange={companyNameHandler} type={"text"} value={companyName}/>
                         </div>
-                        <div>
-                            <span>Time:</span>
-                            <input onChange={timeHandler} type="text" value={time}/>
+                        <div className='oneLineProperty'>
+                            <span style={lightTheme ? {} : {color: "#a9a9a9"}}>Time:</span>
+                            <NormalContactInput inputOnchange={timeHandler} type={"text"} value={time}/>
                         </div>
 
-                        <div>
-                            <span>Tasks:</span>
-                            {job.task.map(item => <textarea>{item}</textarea>)}
+                        <div className='multiLineProperty'>
+                            <div style={lightTheme ? {} : {color: "#a9a9a9"}}>Tasks:</div>
+                            {job.task.map(item => <NormalContactInput type={"text"} value={item}/>)}
                             {addTask ?
-                                <form onSubmit={addTaskFormHandler}>
-                                    <input type="text"/>
-                                    <button type="submit">ADD</button>
-                                </form> :
-                                <button onClick={addTaskHandler}>ADD TASKS</button>}
+                                <div>
+                                    <NormalContactInput type={"text"}/>
+                                    <EditBtn content={'ADD'} type={"submit"}/>
+                                </div> :
+                                <EditBtn onClick={addTaskHandler} content={'ADD'} type={""}/>}
                         </div>
 
-                        <div>
-                            <span>Achievements:</span>
-                            {job.achievements.map(item => <textarea>{item}</textarea>)}
+                        <div className='multiLineProperty'>
+                            <div style={lightTheme ? {} : {color: "#a9a9a9"}}>Achievements:</div>
+                            {job.achievements.map(item => <NormalContactInput type={"text"} value={item}/>)}
                             {addAchievement ?
-                                <form onSubmit={addAchievementFormHandler}>
-                                    <input type="text"/>
-                                    <button type="submit">ADD</button>
+                                <form>
+                                    <NormalContactInput type={"text"}/>
+                                    <EditBtn content={'ADD'} type={"submit"}/>
                                 </form> :
-                                <button onClick={addAchievementHandler}>ADD ACHIEVEMENT</button>}
+                                <EditBtn onClick={addAchievementHandler} content={'ADD'} type={""}/>}
                         </div>
-
-                        <button type="submit">CONFIRM</button>
+                        <EditBtn content={'CONFIRM'} type={"submit"}/>
                     </form> :
-                    <div>
-                        <div>{job.jobTitle}</div>
-                        <button onClick={updateBtnJobHandler}>UPDATE</button>
+                    <div className='updateJob'>
+                        <div style={lightTheme ? {} : {color: "#a9a9a9"}}>{job.jobTitle}</div>
+                        <EditBtn onClick={updateBtnJobHandler} content={'UPDATE'} type={""}/>
                     </div>
             }
         </div>

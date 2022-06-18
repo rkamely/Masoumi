@@ -12,6 +12,7 @@ function NormalContactInput({inputOnchange, property, placeHolder, value, type})
                className='normalContactInput' type={`${type ? type : "text"}`}
                placeholder={placeHolder}
                style={lightTheme ? {} : {background: "#d2d3d3"}}
+               value={value}
         />
     );
 }

@@ -1,0 +1,52 @@
+@import "../Constants/Mixin";
+@import "../Constants/Variables";
+
+.Footer {
+  margin-top: 50px;
+  padding-top: 85px;
+  height: auto;
+  > :nth-child(1) {
+    width: 90%;
+  }
+
+  .contactForm {
+    @include Display(column, flex-start, center);
+    padding-top: 50px;
+
+
+    textarea {
+      width: 60%;
+      margin: 5px auto;
+      padding: 10px;
+      outline: none;
+      border: $Border;
+      height: 300px;
+      border-radius: $BorderRadius;
+      transition: 0.25s linear;
+
+      &:focus {
+        box-shadow: $BoxShadow;
+      }
+
+      & ::placeholder {
+        color: $PlaceholderColor;
+        font-size: 1.5vw;
+        opacity: .8;
+
+      }
+    }
+
+
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+  .contactForm > * {
+    width: 60% !important;
+  }
+
+  textarea {
+    height: 150px !important;
+  }
+}

@@ -1,8 +1,97 @@
 @import "../Constants/Mixin";
 @import "../Constants/Variables";
 
+.editUserName{
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border: $Border;
+  border-radius: $BorderRadius;
+
+>form{
+  @include Display(row,space-between , center);
+  @media only screen and (max-width: 768px) {
+    @include Display(column,center , center);
+
+  }
+  >div{
+    @include Display(column,space-between , flex-start);
+    @media only screen and (max-width: 768px) {
+      @include Display(column,center , center);
+
+    }
+  }
+input{
+  width: 50%;
+  margin: .5rem 0!important;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin: 1rem 0!important;
+  }
+}
+}
+
+}
 .userProfile {
+  @include Display(column, flex-start, center);
   padding-top: 10rem;
   width: 90%;
   margin: auto;
+
+  >section{
+    width: 100%;
+  }
+
+  .editAbout {
+    @include Display(row, space-between, center);
+    @media only screen and (max-width: 768px) {
+      @include Display(column, center, center);
+
+    }
+    width: 100%;
+    border: $Border;
+    border-radius: $BorderRadius;
+    margin: 1rem auto;
+    padding: 1.5rem;
+
+    > div {
+      width: 70%;
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+margin-bottom: 1rem;
+      }
+    }
+
+    > form {
+      width: 100%;
+
+      @include Display(row, space-between, center);
+      @media only screen and (max-width: 768px) {
+        @include Display(column, center, center);
+
+      }
+      > textarea {
+        width: 70%;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        @media only screen and (max-width: 768px) {
+         margin-bottom: 1rem;
+          width: 100%;
+
+
+        }
+      }
+    }
+  }
+
+  .editJob {
+    border: $Border;
+    border-radius: $BorderRadius;
+    padding: 1rem;
+    margin: 1rem auto;
+    >button{
+      margin-top: .5rem;
+    }
+
+  }
 }

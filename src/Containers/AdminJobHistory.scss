@@ -1,0 +1,31 @@
+@import "../Constants/Mixin";
+@import "../Constants/Variables";
+
+.jobTitle {
+  border-bottom: $Border;
+  padding: .5rem;
+
+  > form {
+    >*{
+      margin: 1rem auto;
+    }
+    .oneLineProperty {
+      @include Display(row, space-between, center);
+
+      > input {
+        margin: 0!important;
+      }
+    }
+    .multiLineProperty{
+      input{
+        width: 100% !important;
+      }
+    }
+
+  }
+}
+
+.updateJob {
+  @include Display(row, space-between, center);
+
+}
