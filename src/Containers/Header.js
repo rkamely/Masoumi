@@ -46,8 +46,8 @@ function Header() {
     }
     const loginFormHandler = (e) => {
         e.preventDefault()
-        let cacheUserName = JSON.parse(localStorage.getItem('owner')).userName
-        let cachePassword = JSON.parse(localStorage.getItem('owner')).password
+        let cacheUserName = JSON.parse(localStorage.getItem('userName'))
+        let cachePassword = JSON.parse(localStorage.getItem('password'))
         LoginValidation(contactUsInfo, cacheUserName, cachePassword)
             .then(() => {
                     setError({

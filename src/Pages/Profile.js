@@ -11,7 +11,16 @@ import NormalContactInput from "../Components/Input/NormalContactInput";
 
 
 function Profile() {
-    const {userName,password, login, aboutMe, setAboutMe, jobHistory, setJobHistory,lightTheme} = useContext(SwitchContext);
+    const {
+        userName,
+        password,
+        login,
+        aboutMe,
+        setAboutMe,
+        jobHistory,
+        setJobHistory,
+        lightTheme
+    } = useContext(SwitchContext);
     const history = useHistory()
     useEffect(() => {
         if (!login) {
@@ -37,19 +46,21 @@ function Profile() {
     const updateBtnJobHandler = () => {
         setUpdateBtnJob(!updateBtnJob)
     }
-    const [newName,setName]=useState(userName)
-    const changeNameHandler=(e)=>{
+    const [newName, setName] = useState(userName)
+    const changeNameHandler = (e) => {
         setName(e)
     }
-    const [newPassword,setPassword]=useState(password)
-    const changePasswordHandler=(e)=>{
+    const [newPassword, setPassword] = useState(password)
+    const changePasswordHandler = (e) => {
         setPassword(e)
     }
-    const editNameForm=()=>{
-        localStorage.setItem('owner', JSON.stringify({"userName": newName, "password": newPassword}))
+    const editNameForm = () => {
+        localStorage.setItem('userName', JSON.stringify(newName))
+        localStorage.setItem('password', JSON.stringify(newPassword))
+
     }
     return (
-        <div className='userProfile'  >
+        <div className='userProfile'>
             <SegmentTitle title={`Hello ${userName}`}/>
 
             <section className='editUserName'>
@@ -65,7 +76,7 @@ function Profile() {
             <section className='editAbout'>
                 {updateAboutMe ?
                     <form onSubmit={formAboutHandler} action="">
-                        <textarea onChange={textareaAboutMeHandler}  >{aboutMe}</textarea>
+                        <textarea onChange={textareaAboutMeHandler}>{aboutMe}</textarea>
                         <EditBtn content={'CONFIRM'} type={"submit"}/>
                     </form>
                     : <div style={lightTheme ? {} : {color: "#a9a9a9"}}>{aboutMe}</div>}
