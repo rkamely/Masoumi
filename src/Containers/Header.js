@@ -101,7 +101,7 @@ function Header() {
                 </div> : null}
                 <div className='leftSide'>
                     {login ? <div className="logout">
-                        <Link to="/profile">Ali's profile</Link>
+                        <Link to="/profile">Profile</Link>
                         <img onClick={logoutHandler} src={logoutIcon} alt="logout"/>
                     </div> : <img onClick={popUpLoginHandler} src={loginIcon} alt="login"/>}
                     {popUp ? <div onClick={closePopUp} className='loginForm'>

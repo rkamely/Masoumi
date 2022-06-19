@@ -12,7 +12,7 @@ function AboutMe() {
     return (
         <section className='aboutMe'>
             {/*<SegmentTitle title={"About Me"} src={aboutMe} alt={'About Me'}/>*/}
-            <h1 style={lightTheme ? {} : {color: "#a9a9a9"}}>PRODUCT MANAGER</h1>
+            <h1 style={lightTheme ? {} : {color: "#a9a9a9"}}>TECHNICAL MANAGER</h1>
             <div className='contentَAboutMe'>
                 <p className='textAboutMe' style={lightTheme ? {} : {color: "#a9a9a9"}}>
                     {aboutMe}

@@ -20,13 +20,13 @@ function App() {
     const [userName, setUserName] = useState(JSON.parse(localStorage.getItem('userName')) || "ali")
     const [password, setPassword] = useState(JSON.parse(localStorage.getItem('password')) || "123")
     console.log(JSON.parse(localStorage.getItem('password')))
-    let defaultAboutMe = "I am Ali Masoumi, Highly capable product manager with 4+ years’ experience in fast-paced tech environments. Dedicated to developing innovative, valuable and successful products that meet customers’ needs. Collaborative and analytical with good business sense and strong interpersonal abilities."
+    let defaultAboutMe = "I am Ali Masoumi, Highly capable technical manager with 4+ years’ experience in fast-paced tech environments. Dedicated to developing innovative, valuable and successful products that meet customers’ needs. Collaborative and analytical with good business sense and strong interpersonal abilities."
     const [aboutMe, setAboutMe] = useState(JSON.parse(localStorage.getItem('aboutMe')) || defaultAboutMe)
 
     let defaultJobHistory = [
         {
             id: 1,
-            jobTitle: 'Product Manager',
+            jobTitle: 'Technical Manager',
             companyName: 'Setareh Aval',
             time: '2016/11-Present',
             task: [
