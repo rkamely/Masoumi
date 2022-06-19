@@ -89,6 +89,9 @@ margin-bottom: 3rem;
 @media only screen and (max-width: 600px) {
   .aboutMe {
     text-align: center;
+    >h1{
+      text-align: center;
+    }
 
     .contentَAboutMe {
       @include Display(column-reverse, space-between, center);

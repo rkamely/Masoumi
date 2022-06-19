@@ -6,7 +6,6 @@ import Loading from "./Containers/Loading";
 import "./App.scss"
 
 
-
 function App() {
 
     const Home = lazy(() => import("./Pages/Home"));
@@ -18,15 +17,15 @@ function App() {
         setLightTheme(!lightTheme)
     }
     const [login, setLogin] = useState(JSON.parse(localStorage.getItem('login')) || false)
-    const [userName, setUserName] = useState(JSON.parse(localStorage.getItem('owner')).userName || "ali")
-    const [password, setPassword] = useState(JSON.parse(localStorage.getItem('owner')).password || "123")
-
+    const [userName, setUserName] = useState(JSON.parse(localStorage.getItem('userName')) || "ali")
+    const [password, setPassword] = useState(JSON.parse(localStorage.getItem('password')) || "123")
+    console.log(JSON.parse(localStorage.getItem('password')))
     let defaultAboutMe = "I am Ali Masoumi, Highly capable product manager with 4+ years’ experience in fast-paced tech environments. Dedicated to developing innovative, valuable and successful products that meet customers’ needs. Collaborative and analytical with good business sense and strong interpersonal abilities."
     const [aboutMe, setAboutMe] = useState(JSON.parse(localStorage.getItem('aboutMe')) || defaultAboutMe)
 
     let defaultJobHistory = [
-         {
-             id:1,
+        {
+            id: 1,
             jobTitle: 'Product Manager',
             companyName: 'Setareh Aval',
             time: '2016/11-Present',
@@ -44,10 +43,10 @@ function App() {
                 "implemented and lunched USSD code *1# .",
                 "Get Pardakhtyari licence.",
             ],
-            logoCompany:"SetarehAvalLogo.png" ,
+            logoCompany: "SetarehAvalLogo.png",
         },
-         {
-             id:2,
+        {
+            id: 2,
             jobTitle: 'Product Manager',
             companyName: 'Sayan card',
             time: '2015/08-2015/11',
@@ -64,7 +63,7 @@ function App() {
             logoCompany: "sayan.png",
         },
         {
-            id:3,
+            id: 3,
             jobTitle: 'Project Manager',
             companyName: 'Shahr Bank',
             time: '2014/09-2015/08',
@@ -86,7 +85,7 @@ function App() {
             logoCompany: "shahr.jpg",
         },
         {
-            id:4,
+            id: 4,
             jobTitle: 'IT Expert',
             companyName: 'Ministry of Communications and Information Technology',
             time: '2012/10-2014/05',
@@ -97,8 +96,7 @@ function App() {
                 "Ensuring data storage is safe and secure.",
                 "Resolving all issues coworkers have with their IT systems and software.",
             ],
-            achievements: [
-            ],
+            achievements: [],
             logoCompany: "ministry.png",
         },
     ]
@@ -106,7 +104,9 @@ function App() {
 
 
     useEffect(() => {
-        localStorage.setItem('owner', JSON.stringify({"userName": userName, "password": password}))
+        localStorage.setItem('userName', JSON.stringify(userName))
+        localStorage.setItem('password', JSON.stringify(password))
+
         localStorage.setItem('aboutMe', JSON.stringify(aboutMe))
     }, [])
 

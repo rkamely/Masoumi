@@ -6,7 +6,6 @@ import SwitchContext from "../../Context/ThemeSwitch";
 
 function Experience(props) {
     const {lightTheme} = useContext(SwitchContext);
-console.log(props.img)
     return (
         <div className='Experience'
              style={lightTheme ? {} : {background: "radial-gradient(circle, rgb(9 17 18) 0%, rgb(21 42 42 / 28%) 100%)"}}>
